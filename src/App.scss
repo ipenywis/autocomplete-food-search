@@ -1,3 +1,23 @@
+@import "./common.scss";
+
+html,
+body,
+#root,
+.page,
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +50,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  margin-bottom: 3em;
+  margin-top: 1em;
+  font-size: 28px;
+  font-family: Oxygen, sans-serif;
+  color: #666b6b;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.warning {
+  color: $base-color;
+  font-size: 20px;
 }

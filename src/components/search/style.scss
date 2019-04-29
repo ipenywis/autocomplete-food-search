@@ -1,0 +1,92 @@
+@import "../../common.scss";
+
+$hover-input-color: rgba(88, 159, 207, 0.835);
+$solid-color: rgba(15, 15, 15, 0.2);
+$result-text-color: #424444;
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin-bottom: 1em;
+    font-size: 27px;
+    color: $base-color;
+  }
+
+  .content {
+    input {
+      width: 30em;
+      height: 42px;
+      border: 0;
+      border-radius: 3px;
+      box-shadow: 0px 0px 15px 3px $solid-color;
+      padding: 0 16px;
+      font-size: 20px;
+      outline: 0;
+      color: $base-color;
+      transition: all, 200ms ease-in-out;
+      &::placeholder {
+        color: $base-color;
+      }
+      &:focus {
+        box-shadow: 0px 0px 19px 3.1px $hover-input-color;
+      }
+    }
+  }
+}
+
+//Popup
+.popup {
+  width: inherit;
+  min-height: 5em;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 2px $solid-color;
+  margin-top: 7px;
+  border-radius: 0px 0px 5px 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .container {
+    .content {
+      margin-bottom: 15px;
+      height: 100%;
+      padding: 0 0 30px 0;
+
+      .item {
+        height: 33px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-top: 0.5px solid rgba(15, 15, 15, 0.2);
+        padding: 0 16px;
+        color: $result-text-color;
+        &:last-child {
+          border-bottom: 0.5px solid $solid-color;
+        }
+        cursor: pointer;
+        transition: all, 230ms ease-in;
+        &:hover {
+          background-color: #aacbe06e;
+        }
+      }
+    }
+    .footer {
+      position: absolute;
+      font-size: 13px;
+      bottom: 3px;
+      width: 99%;
+      left: 0px;
+      display: flex;
+      border-top: 1px solid $solid-color;
+      padding: 2px 3px;
+      color: $base-color;
+    }
+  }
+}
